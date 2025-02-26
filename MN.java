@@ -10,13 +10,13 @@ public class MN {
     
         //Menu
         do {
-        System.out.println("==========");
+        System.out.println("====================================");
         System.out.println("Bienvenido || Seleccione una opcion:");
         System.out.println("1.-Almacenamiento ");
         System.out.println("2.-Ventas");
         System.out.println("3.-Compras");
         System.out.println("4.Salir");
-        System.out.println("==========");
+        System.out.println("====================================");
 
         Opcion = leer.nextInt();
         //almacenamiento
