@@ -33,7 +33,7 @@ public class MN {
         switch(Opcion){
         case 1: System.out.println("================================");
                 System.out.println("INGRESE EL PRODUCTO A REGISTRAR:");
-                System.o;
+
         }
         break;
 
