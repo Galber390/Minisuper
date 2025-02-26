@@ -36,6 +36,12 @@ public class MN {
         case 2: System.out.println("Te veo al rato");
         break;
         default: System.out.println("oPCION Invalida");
+
+        Opcion = leer.nextInt();
+        switch(Opcion){
+            case 1:
+            break;
+        }
         }
     }
 }
