@@ -7,11 +7,6 @@ public static void main(String [] args){
         ArrayList<Float> Precio = new ArrayList<>();
         ArrayList<Integer> Cantidad = new ArrayList<>();
         int Opcion;
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 0a79e2db6197fa1f19d6080cc7bed0192bbcdfe4
         //Leer datos
         Scanner leer = new Scanner(System.in);
 
@@ -36,18 +31,14 @@ public static void main(String [] args){
         System.out.println("Esta en el inventario que desea hacer ");
         System.out.println("1.-REGISTRAR PRODUCTO");
         System.out.println("2.-VER");
-<<<<<<< HEAD
         System.out.println("3.- QUITAR");
         System.out.println("========================");
-        //dsad
-=======
         System.out.println("3.-QUITAR");
         System.out.println("======================================");
         System.out.println(" ");
         System.out.println(" ");
         System.out.println(" ");
-         // 
->>>>>>> f9fb193c6320403dd0c25b89b91266b509b8095a
+
         Opcion = leer.nextInt();
         switch(Opcion){
                 //Opcion para registrar producto
@@ -84,35 +75,20 @@ public static void main(String [] args){
                 case 3:
                 break;
                 }
-        case 2:
-        break;
-<<<<<<< HEAD
-        
-=======
 
-<<<<<<< HEAD
         case 2: System.out.println("========================================");
         System.out.println("A INGRESADO A VENTAS");
         System.out.println("================================================");
         System.out.println();
         break;
-        
-        default: System.out.println("Opcion Invalida");
-=======
-        case 2: 
-        break;
->>>>>>> f9fb193c6320403dd0c25b89b91266b509b8095a
-
->>>>>>> 0a79e2db6197fa1f19d6080cc7bed0192bbcdfe4
         case 3:
         break;
         case 4:
         break;
 
-        default: System.out.println("Opcion invalida");
         }
         }while (Opcion !=4); System.out.println("Cerrando programa");
-System.out.println("Programa cerrado");
+        System.out.println("Programa cerrado");
         }
 }
 
