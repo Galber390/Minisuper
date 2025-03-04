@@ -4,7 +4,7 @@ public class MN {
         
         //Variable
         int Opcion;
-        int REG;
+        
         //Leer datos
         Scanner leer = new Scanner(System.in);
     
@@ -28,7 +28,7 @@ public class MN {
         System.out.println("2.-VER");
         System.out.println("3.- QUITAR");
         System.out.println("========================");
-         // 
+        //dsad
         Opcion = leer.nextInt();
         switch(Opcion){
         case 1: System.out.println("================================");
@@ -37,8 +37,10 @@ public class MN {
         }
         break;
 
-        case 2: System.out.println("Te veo al rato");
+        case 2: System.out.println("========================================");
+        System.out.println("A INGRESADO A VENTAS");
         break;
+        
         default: System.out.println("Opcion Invalida");
 
         Opcion = leer.nextInt();
