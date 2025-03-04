@@ -1,13 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class MN {
-    public static void main(String [] args){
-        
+public static void main(String [] args){
         //Variable
+        ArrayList<String> Descripcion = new ArrayList<>();
+        ArrayList<Float> Precio = new ArrayList<>();
+        ArrayList<Integer> Cantidad = new ArrayList<>();
         int Opcion;
-        int REG;
+
         //Leer datos
         Scanner leer = new Scanner(System.in);
-    
+
         //Menu
         do {
         System.out.println("====================================");
@@ -19,7 +22,7 @@ public class MN {
         System.out.println("====================================");
         System.out.println(" ");
         Opcion = leer.nextInt();
-        //almacenamiento
+        //Almacen
         switch(Opcion){
         case 1:
         System.out.println(" ");
@@ -37,41 +40,54 @@ public class MN {
          // 
         Opcion = leer.nextInt();
         switch(Opcion){
-        case 1: System.out.println("================================");
-                System.out.println("Cuantos productos va a registrar");
-                REG = leer.nextInt();
-
-                String[] Productos = new String [REG];
-                int[] Cantidad = new int [REG];
-
-                for (int i = 0; i < REG; i++){
-
-                System.out.println("Ingrese el nombre del producto:");
-                Productos [i] = leer.nextLine();
-                Productos [i] = leer.nextLine();
-
-                System.out.println("Ingrese la cantidad de Productos:");
-                Cantidad [i] = leer.nextInt();
+                //Opcion para registrar producto
+                case 1:
+                System.out.println("\n\n======================");
+                System.out.print("Descripcion: ");
+                leer.nextLine();
+                Descripcion.add(leer.nextLine());                        
+                System.out.print("Precio: $");
+                Precio.add(leer.nextFloat());
+                        
+                System.out.print("Cantidad: ");
+                Cantidad.add(leer.nextInt());
+                
+                System.out.println("======================");
+                break;
+                
+                case 2:
+                //Opcion para ver los productos
+                System.out.println("\n\n=========================");
+                System.out.println("---PRODUCTOS ALMACENADOS---");
+                System.out.println("=========================");
+                for(int x = 0; x < Descripcion.size(); x++) { 
+                System.out.println("\n\n======================");
+                System.out.print("Descripcion: ");
+                System.out.println(Descripcion.get(x));
+                System.out.print("Precio: $");
+                System.out.println(Precio.get(x));
+                System.out.print("Cantidad: ");
+                System.out.println(Cantidad.get(x));
+                System.out.println("======================");}
+                break;
+                
+                case 3:
+                break;
                 }
-                for (int i = 0; i<REG; i++){
-                System.out.println("Se registro el producto " + Productos[i] + " con " + Cantidad[i] + " unidades");
-                }
+        case 2:
         break;
-
-        case 2: 
-        break;
-
+        
         case 3:
         break;
+        case 4:
+        break;
 
         default: System.out.println("Opcion invalida");
+        }
+        }while (Opcion !=4); System.out.println("Cerrando programa");
+System.out.println("Programa cerrado");
+        }
+}
 
-        }
-        default: System.out.println("Opcion invalida");
-        }
-        }
-while (Opcion !=4); System.out.println("Cerrando programa");
-}
-}
 
 
