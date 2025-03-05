@@ -46,7 +46,7 @@ public static void main(String [] args){
                 System.out.println("\n\n======================");
                 System.out.print("Descripcion: ");
                 leer.nextLine();
-                Descripcion.add(leer.nextLine());                        
+                Descripcion.add(leer.nextLine());
                 System.out.print("Precio: $");
                 Precio.add(leer.nextFloat());
                         
@@ -61,7 +61,7 @@ public static void main(String [] args){
                 System.out.println("\n\n=========================");
                 System.out.println("---PRODUCTOS ALMACENADOS---");
                 System.out.println("=========================");
-                for(int x = 0; x < Descripcion.size(); x++) { 
+                for(int x = 0; x < Descripcion.size(); x++) {
                 System.out.println("\n\n======================");
                 System.out.print("Descripcion: ");
                 System.out.println(Descripcion.get(x));
@@ -79,7 +79,11 @@ public static void main(String [] args){
         case 2: System.out.println("========================================");
         System.out.println("A INGRESADO A VENTAS");
         System.out.println("================================================");
-        System.out.println();
+        System.out.println("1.- REGISTRO DE VENTAS");
+        System.out.println("2.- SODASASDCASC");
+        System.out.println("3.-  VACIO XD XD XD XD XD");
+        System.out.println("1.- REGISTRO");
+
         break;
         case 3:
         break;
