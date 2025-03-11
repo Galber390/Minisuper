@@ -14,7 +14,7 @@ public static void main(String [] args){
         do {
         System.out.println("====================================");
         System.out.println("Bienvenido || Seleccione una opcion:");
-        System.out.println("1.-Inventario");
+        System.out.println("1.-Almacen");
         System.out.println("2.-Ventas");
         System.out.println("3.-Compras");
         System.out.println("4.-Salir");
@@ -24,9 +24,7 @@ public static void main(String [] args){
         //Almacen
         switch(Opcion){
         case 1:
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
+
         System.out.println("======================================");
         System.out.println("Esta en el inventario que desea hacer ");
         System.out.println("1.- REGISTRAR PRODUCTO");
@@ -34,9 +32,6 @@ public static void main(String [] args){
         System.out.println("3.- QUITAR");
         System.out.println("4.- Buscar");
         System.out.println("========================");
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
 
         Opcion1 = leer.nextInt();
         switch(Opcion1){
@@ -65,7 +60,7 @@ public static void main(String [] args){
                 System.out.println("=========================");
                 for(int x = 0; x < Descripcion.size(); x++) {
                 System.out.println("\n\n======================");
-                System.out.println( "Posicion"+ x);
+                System.out.println( "Posicion: "+ x);
                 System.out.print("Descripcion: ");
                 System.out.println(Descripcion.get(x));
                 System.out.print("Precio: $");
@@ -77,8 +72,8 @@ public static void main(String [] args){
                 
                 case 3:
                 //Opcion para elimininar productos
-                
-                System.out.print("Ingrese la posición del producto a eliminar: ");
+                System.out.println("=============================================");
+                System.out.print("Ingrese la posicion del producto a eliminar: ");
                 int pos = leer.nextInt();
 
                 if (pos >= 0 && pos < Descripcion.size()) {
@@ -87,11 +82,12 @@ public static void main(String [] args){
                 Cantidad.remove(pos);
                 System.out.println("Producto eliminado correctamente.");
                 } else {
-                System.out.println("Posición inválida.");
+                System.out.println("Posicion invalida.");
                 }
+                System.out.println("=============================================");
                 break;
                 case 4:
-                
+                System.out.println("=============================================");
                 System.out.print("Ingrese el nombre del Producto a buscar: ");
                 leer.nextLine();
                 String buscarProducto = leer.nextLine();
@@ -105,6 +101,7 @@ public static void main(String [] args){
                 } else {
                 System.out.println("Producto no encontrado.");
                 }
+                System.out.println("=============================================");
                 break;
                 }
         break;
