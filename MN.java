@@ -1,5 +1,40 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+// Clase Proveedor
+class Proveedor {
+        String nombre;
+        String empresa;
+        String fecha;
+        String horaDeLlegada;
+        String producto;
+        String costoUnitario;
+        int cantidadDeProductos;
+        double costoDeProductos;
+
+public Proveedor(String nombre, String empresa, String fecha, String horaDeLlegada,  String producto, String costoUnitario, String costoUnitario2, int cantidadDeProductos, double costoDeProductos) {
+        this.nombre = nombre;
+        this.empresa = empresa;
+        this.fecha = fecha;
+        this.producto = producto;
+        this.costoUnitario = costoUnitario;
+        this.horaDeLlegada = horaDeLlegada;
+        this.cantidadDeProductos = cantidadDeProductos;
+        this.costoDeProductos = costoDeProductos;
+        }
+
+@Override
+public String toString() {
+        return "Nombre: " + nombre + 
+        ", Nombre de la empresa: " + empresa +
+        ", Fecha: " + fecha +
+        ", Hora de llegada: " + horaDeLlegada +
+        ", Producto: " + producto +
+        ", Costo unitario: " + costoUnitario + 
+        ", Cantidad de Productos: " + cantidadDeProductos + 
+        ", Costo Total: $" + costoDeProductos;
+}
+}
 public class MN {
 public static void main(String [] args){
         //Variable
@@ -16,7 +51,7 @@ public static void main(String [] args){
         System.out.println("Bienvenido || Seleccione una opcion:");
         System.out.println("1.-Almacen");
         System.out.println("2.-Ventas");
-        System.out.println("3.-Compras");
+        System.out.println("3.-Provedores");
         System.out.println("4.-Salir");
         System.out.println("====================================");
         System.out.println(" ");
@@ -114,7 +149,71 @@ public static void main(String [] args){
         System.out.println("1.- REGISTRO");
 
         break;
+        //Provedores
         case 3:
+        ArrayList<Proveedor> proveedores = new ArrayList<>();
+        int opcion;
+        
+        do {
+                System.out.println("====================================");
+                System.out.println("Gestio de proveedores");
+                System.out.println("1.-Agregar proveedor");
+                System.out.println("2.-Mostrar lista de proveedores");
+                System.out.println("3.-Salir");
+                System.out.println("====================================");
+                opcion = leer.nextInt();
+                leer.nextLine(); // Limpiar el buffer
+                
+                switch (opcion) {
+                case 1 -> {
+                        
+                        System.out.print("Nombre del proveedor: ");
+                        String nombre = leer.nextLine();
+                        
+                        System.out.print("Nombre de la empresa: ");
+                        String empresa = leer.nextLine();
+
+                        System.out.print("Fecha: ");
+                        String fecha = leer.nextLine();
+
+                        System.out.print("Hora de llegada: (24 Horas) ");
+                        String horaDeLlegada = leer.nextLine();
+
+                        System.out.print("Nombre de producto: ");
+                        String producto = leer.nextLine();
+
+                        System.out.print("Costo por Pieza: ");
+                        String costoUnitario = leer.nextLine();
+
+                        System.out.print("Cantidad de productos: ");
+                        int cantidadDeProductos = leer.nextInt();
+
+                        System.out.print("Costo total de productos comprados: ");
+                        double costoDeProductos = leer.nextDouble();
+
+                        leer.nextLine(); // Limpiar el buffer
+                        
+                        Proveedor proveedor = new Proveedor (nombre, empresa, fecha, horaDeLlegada, producto, costoUnitario, costoUnitario, cantidadDeProductos, costoDeProductos);
+
+                        proveedores.add(proveedor);
+                        System.out.println("¡Proveedor registrado correctamente!");
+                }
+                        
+                case 2 -> {
+                        System.out.println("\n--- Lista de Proveedores ---");
+                        for (Proveedor p : proveedores) {
+                System.out.println(p);
+                        } {
+                        }
+                }
+                        
+                case 3 -> System.out.println("Saliendo del sistema. ¡Gracias por usar el programa!");
+
+                default -> System.out.println("Opción no válida. Por favor, intenta nuevamente.");
+                }
+        } while (opcion != 3);
+
+
         break;
         case 4:
         break;
